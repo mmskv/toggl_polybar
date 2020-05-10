@@ -9,6 +9,7 @@ Simmilar to official dock widget for macOS.
 
 ### Sample syntax to add this witget to polybar
 
+```
   [module/toggl]
   type = custom/script
   
@@ -17,3 +18,4 @@ Simmilar to official dock widget for macOS.
   format = <label>
   format-foreground =  ${colors.fg}
   format-padding = 1
+```
