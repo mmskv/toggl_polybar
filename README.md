@@ -1,7 +1,7 @@
 # toggl_polybar
 Simple toggl widget that shows currently running project and time it has been running.
 
-Simmilar to official dock widget for macOS, but for polybar/i3bar/etc.
+Similar to official dock widget for macOS, but for polybar/i3bar/etc.
 
 
 ## Screenshots
