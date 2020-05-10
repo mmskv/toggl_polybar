@@ -7,7 +7,7 @@ Simmilar to official dock widget for macOS.
 ![screenshot](https://github.com/maksmeshkov/toggl_polybar/blob/master/screenshot.png "This is how it looks")
 
 
-### Sample syntax to add this witget to polybar
+### Sample syntax to add this widget to polybar
 
 ```
   [module/toggl]
