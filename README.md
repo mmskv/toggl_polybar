@@ -1,5 +1,5 @@
 # toggl_polybar
-Simple toggl widget that shows currently running project and time it has been running.
+Simple toggl.com time tracker widget that shows currently running project and time it has been running.
 
 Similar to official dock widget for macOS, but for polybar/i3bar/etc.
 
@@ -20,3 +20,5 @@ Similar to official dock widget for macOS, but for polybar/i3bar/etc.
   format-foreground =  ${colors.fg}
   format-padding = 1
 ```
+
+ Don't forget to add your API key to the python file!
