@@ -1,6 +1,18 @@
+#!/usr/bin/env python3
 import time, requests, json
+from dotenv import load_dotenv
+from os import getenv
+from pathlib import Path
 
-api_token = "" # Paste your API token here
+# Get API token from .env file
+env_path = pathlib.Path(__file__).parent.absolute() / 'togglapi.env'
+load_dotenv(dotenv_path=env_path)
+api_token = getenv("TOGGL_API_KEY")
+
+if(api_token == None):
+    print("API token empty")
+    exit()
+    
 current = json.loads(
     requests.get("https://www.toggl.com/api/v8/time_entries/current", auth=(api_token, "api_token")).content)
 if current['data'] is not None and ("pid" in current["data"] or "description" in current["data"]):
@@ -20,4 +32,4 @@ if current['data'] is not None and ("pid" in current["data"] or "description" in
     out = name + " " + '(' + h + ':' + m + ')'
     print(out)
 else:
-    print("No project is running")
+    print("No project")
