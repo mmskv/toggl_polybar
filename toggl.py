@@ -5,7 +5,7 @@ from os import getenv
 from pathlib import Path
 
 # Get API token from .env file
-env_path = pathlib.Path(__file__).parent.absolute() / 'togglapi.env'
+env_path = Path(__file__).parent.absolute() / 'togglapi.env'
 load_dotenv(dotenv_path=env_path)
 api_token = getenv("TOGGL_API_KEY")
 
