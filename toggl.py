@@ -14,13 +14,13 @@ if(api_token == None):
     exit()
     
 current = json.loads(
-    requests.get("https://www.toggl.com/api/v8/time_entries/current", auth=(api_token, "api_token")).content)
+    requests.get("https://api.track.toggl.com/api/v8/time_entries/current", auth=(api_token, "api_token")).content)
 if current['data'] is not None and ("pid" in current["data"] or "description" in current["data"]):
     seconds = time.time() - abs(current['data']['duration'])
     m, s = divmod(seconds, 60)
     h, m = divmod(m, 60)
     if "pid" in current["data"]:
-        link = 'https://www.toggl.com/api/v8/projects/' + str(current['data']['pid'])
+        link = 'https://api.track.toggl.com/api/v8/projects/' + str(current['data']['pid'])
         name = json.loads(requests.get(link, auth=(api_token, "api_token")).content)["data"]["name"]
     else:
         name = current['data']['description']
